@@ -19,3 +19,9 @@ def find_greater_numbers(nums):
         >>> find_greater_numbers([])
         0
     """
+    count = 0
+    for index in range(0,len(nums) - 1):
+        for num_check in nums[index + 1:]:
+            if nums[index] < num_check:
+                count += 1
+    return count
